@@ -6,7 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Definir la variable de entorno para el endpoint
 if (!process.env.REACT_APP_CODESPACE_URL) {
-  const codespaceName = window.location.hostname.split('-8000')[0];
+  const host = window.location.hostname;
+  const codespaceName = host.replace('-8000.app.github.dev', '');
   process.env.REACT_APP_CODESPACE_URL = `https://${codespaceName}-8000.app.github.dev`;
 }
 import App from './App';

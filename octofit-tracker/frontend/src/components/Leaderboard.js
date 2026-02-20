@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const Leaderboard = () => {
   const [leaderboard, setLeaderboard] = useState([]);
-  const apiUrl = `${process.env.REACT_APP_CODESPACE_URL}/api/leaderboards/`;
+  const apiUrl = `${process.env.REACT_APP_CODESPACE_URL}/api/leaderboard/`;
 
   useEffect(() => {
     fetch(apiUrl)
